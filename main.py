@@ -20,6 +20,7 @@ def main():
         if scelta == "1":
             nuovo_nome = input("Inserisci il nuovo nome della crociera: ")
             # TODO: Aggiorna il nome della crociera
+            crociera.aggiorna_nome_crociera(nuovo_nome)
 
         elif scelta == "2":
             file_path = "dati_crociera.csv"
@@ -42,7 +43,7 @@ def main():
             cabine_ordinate = crociera.cabine_ordinate_per_prezzo()
             print("\n--- Cabine ordinate per prezzo ---")
             for c in cabine_ordinate:
-                print(c)
+                print(c.codice_cabina, c.prezzo)
 
         elif scelta == "5":
             print("\n--- Elenco passeggeri ---")
